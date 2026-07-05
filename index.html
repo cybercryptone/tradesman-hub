@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Tradesman Resource Hub — Guides, Rates & Tools for Tradespeople</title>
+<meta name="description" content="Free guides for UK tradespeople covering hourly rates, job quoting, invoicing, insurance, and business tools. Practical resources for electricians, plumbers, builders, and more.">
+<link rel="canonical" href="https://cybercryptone.github.io/tradesman-hub/">
+<style>
+  :root {
+    --ink: #111827;
+    --mid: #374151;
+    --muted: #6B7280;
+    --accent: #E8600A;
+    --bg: #F9FAFB;
+    --surface: #FFFFFF;
+    --rule: #E5E7EB;
+    --r: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; font-size: 1.0625rem; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  a:hover { opacity: 0.8; }
+
+  .site-header { background: var(--surface); border-bottom: 1px solid var(--rule); padding: 1rem 1.5rem; }
+  .site-header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
+  .site-logo { font-size: 1.125rem; font-weight: 800; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+  .site-logo span { color: var(--accent); }
+  .site-nav { display: flex; gap: 1.5rem; font-size: 0.875rem; }
+  .site-nav a { text-decoration: none; color: var(--mid); font-weight: 500; }
+  .site-nav a:hover { color: var(--accent); }
+
+  .hero { background: var(--surface); border-bottom: 1px solid var(--rule); padding: 4rem 1.5rem; text-align: center; }
+  .hero-inner { max-width: 640px; margin: 0 auto; }
+  .hero h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 1rem; }
+  .hero p { font-size: 1.125rem; color: var(--mid); margin-bottom: 1.75rem; }
+  .hero-cta { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 700; padding: 0.875rem 2rem; border-radius: var(--r); font-size: 1rem; }
+  .hero-cta:hover { opacity: 0.88; color: #fff; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; }
+  .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
+  .section-title { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+  .section-sub { color: var(--mid); margin-bottom: 2rem; font-size: 0.9375rem; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; margin-bottom: 3.5rem; }
+  .card { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: 1.5rem; display: flex; flex-direction: column; }
+  .card-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; }
+  .card h3 { font-size: 1.0625rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.5rem; }
+  .card h3 a { color: var(--ink); text-decoration: none; }
+  .card h3 a:hover { color: var(--accent); }
+  .card p { font-size: 0.875rem; color: var(--mid); flex: 1; margin-bottom: 1rem; line-height: 1.55; }
+  .card-link { font-size: 0.875rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .card-link:hover { text-decoration: underline; }
+
+  .tools-band { background: var(--ink); border-radius: var(--r); padding: 2.5rem; margin-bottom: 3.5rem; text-align: center; }
+  .tools-band h2 { color: #fff; font-size: 1.375rem; font-weight: 800; margin-bottom: 0.5rem; }
+  .tools-band p { color: rgba(255,255,255,0.72); font-size: 0.9375rem; margin-bottom: 1.5rem; }
+  .tools-band a { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 700; padding: 0.75rem 1.75rem; border-radius: 6px; font-size: 0.9375rem; }
+  .tools-band a:hover { opacity: 0.88; color: #fff; }
+
+  .trades-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.75rem; }
+  .trade-chip { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 0.75rem 1rem; font-size: 0.875rem; font-weight: 600; color: var(--mid); text-align: center; }
+
+  footer { border-top: 1px solid var(--rule); padding: 2rem 1.5rem; text-align: center; font-size: 0.8125rem; color: var(--muted); }
+  footer a { color: var(--muted); }
+
+  @media (max-width: 600px) { .hero { padding: 2.5rem 1rem; } .main { padding: 2rem 1rem; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="site-logo">Tradesman<span>Hub</span></a>
+    <nav class="site-nav">
+      <a href="uk-tradesman-hourly-rate-guide.html">Hourly Rates</a>
+      <a href="how-to-quote-a-job-tradesman.html">Quoting Guide</a>
+      <a href="best-quoting-apps-tradesmen-2026.html">Best Apps</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Free Resources for UK Tradespeople</h1>
+    <p>Practical guides on pricing your work, quoting jobs, handling VAT, and running a more profitable trade business. Written for electricians, plumbers, builders, and every trade in between.</p>
+    <a href="uk-tradesman-hourly-rate-guide.html" class="hero-cta">Start with Hourly Rates</a>
+  </div>
+</section>
+
+<main class="main">
+
+  <div class="section-label">Featured Guides</div>
+  <div class="section-title">Everything you need to price work and get paid</div>
+  <p class="section-sub">Guides written for sole traders and small trade businesses in the UK, covering the questions that come up most often on the job.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-tag">Pricing</div>
+      <h3><a href="uk-tradesman-hourly-rate-guide.html">UK Tradesman Hourly Rate Guide 2026</a></h3>
+      <p>What should you charge per hour? This guide covers going rates for every major UK trade, plus how to calculate a sustainable rate based on your own costs.</p>
+      <a href="uk-tradesman-hourly-rate-guide.html" class="card-link">Read guide &rarr;</a>
+    </div>
+    <div class="card">
+      <div class="card-tag">Quoting</div>
+      <h3><a href="how-to-quote-a-job-tradesman.html">How to Quote a Job as a Tradesman</a></h3>
+      <p>Step-by-step quoting process: what to include, how to price materials, how to handle VAT, and how to send a quote that wins the job.</p>
+      <a href="how-to-quote-a-job-tradesman.html" class="card-link">Read guide &rarr;</a>
+    </div>
+    <div class="card">
+      <div class="card-tag">Software</div>
+      <h3><a href="best-quoting-apps-tradesmen-2026.html">Best Quoting Apps for Tradesmen in 2026</a></h3>
+      <p>Honest comparison of the top quoting and invoicing apps for tradespeople: AI tools, traditional platforms, pricing, and who each one suits.</p>
+      <a href="best-quoting-apps-tradesmen-2026.html" class="card-link">Read guide &rarr;</a>
+    </div>
+  </div>
+
+  <div class="tools-band">
+    <h2>Need to quote a job right now?</h2>
+    <p>Sleepless Tradesman generates a fully itemised quote from a plain-English job description in under 60 seconds. Free to try, no card required.</p>
+    <a href="https://sleeplesstradesman.com">Try AI Quoting Free</a>
+  </div>
+
+  <div class="section-label">Trades Covered</div>
+  <div class="section-title">Guides for every trade</div>
+  <p class="section-sub">Rate data and quoting guidance specific to each trade type across the UK.</p>
+  <div class="trades-grid">
+    <div class="trade-chip">Electricians</div>
+    <div class="trade-chip">Plumbers</div>
+    <div class="trade-chip">Builders</div>
+    <div class="trade-chip">Gas Engineers</div>
+    <div class="trade-chip">Roofers</div>
+    <div class="trade-chip">Painters</div>
+    <div class="trade-chip">Carpenters</div>
+    <div class="trade-chip">Tilers</div>
+    <div class="trade-chip">Plasterers</div>
+    <div class="trade-chip">Landscapers</div>
+    <div class="trade-chip">Handymen</div>
+    <div class="trade-chip">HVAC Engineers</div>
+  </div>
+
+</main>
+
+<footer>
+  <p>TradesmanHub is an independent resource for UK tradespeople. Powered by <a href="https://sleeplesstradesman.com">Sleepless Tradesman</a>.</p>
+</footer>
+
+</body>
+</html>
